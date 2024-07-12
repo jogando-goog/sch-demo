@@ -39,6 +39,8 @@ def create_dataset(
 
     bq_client = bigquery.Client(project=project_id)
 
+    print("this is a test")
+
     def get_query(bq_input_table: str) -> str:
         """Generates BQ Query to read data.
 
