@@ -61,11 +61,14 @@ def create_training_pipeline(pipeline_job_spec_path: str):
             data_path=data_path,
             project_id=project_id)
 
-        my_list = [{'name': 'foo'}, {'name': 'bar'}]
-        with dsl.ParallelFor(my_list) as item:
+        with dsl.ParallelFor(
+            items=[1, 5, 10, 25],
+            parallelism=2
+        ) as epochs:
             train_model_task = train_model(
                 model_directory=model_directory,
                 data_path=data_path).after(create_dataset_task)
+
 
         # deploy_model_task = deploy_model(
         #     model_directory=model_directory,
