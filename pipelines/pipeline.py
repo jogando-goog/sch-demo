@@ -67,10 +67,10 @@ def create_training_pipeline(pipeline_job_spec_path: str):
                 model_directory=model_directory,
                 data_path=data_path).after(create_dataset_task)
 
-        deploy_model_task = deploy_model(
-            model_directory=model_directory,
-            project_id=project_id,
-            region=region).after(train_model_task)
+        # deploy_model_task = deploy_model(
+        #     model_directory=model_directory,
+        #     project_id=project_id,
+        #     region=region).after(train_model_task)
 
     compiler.Compiler().compile(
         pipeline_func=pipeline,
