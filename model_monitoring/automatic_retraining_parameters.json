@@ -1,6 +1,6 @@
 {
     "bq_table": "sbx-777-dev.test_dataset.dry_beans",
-    "model_directory": "gs://sbx-777-dev-dry-beans-dt2-bucket/trained_models/2024-07-15 10:44:03.560365",
+    "model_directory": "gs://sbx-777-dev-dry-beans-dt2-bucket/trained_models/2024-07-12 10:35:51.709923",
     "data_path": "gs://sbx-777-dev-dry-beans-dt2-bucket/data.csv",
     "project_id": "sbx-777-dev",
     "region": "us-central1",

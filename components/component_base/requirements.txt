@@ -1,7 +1,6 @@
 db_dtypes
 fsspec
 gcsfs
-google-cloud-aiplatform
 google-cloud-bigquery
 joblib
 kfp>=2.0.0
