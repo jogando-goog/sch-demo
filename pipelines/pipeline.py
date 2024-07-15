@@ -54,12 +54,14 @@ def create_training_pipeline(pipeline_job_spec_path: str):
         project_id: str,
         region: str):
 
+        from kfp import dsl
+
         create_dataset_task = create_dataset(
             bq_table=bq_table,
             data_path=data_path,
             project_id=project_id)
 
-        my_dict = [{'name': 'foo'}, {'name': 'bar'}]
+        my_list = [{'name': 'foo'}, {'name': 'bar'}]
         with dsl.ParallelFor(my_list) as item:
             train_model_task = train_model(
                 model_directory=model_directory,
